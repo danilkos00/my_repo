@@ -1,0 +1,9 @@
+# Nmap 7.94SVN scan initiated Mon Sep 28 22:55:52 2026 as: nmap -sS --max-rate 100 -p1-1000 -oX nmap_synscan_fast.xml -oN nmap_synscan_fast.txt 45.33.32.156
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.20s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+# Nmap done at Mon Sep 28 22:56:03 2026 -- 1 IP address (1 host up) scanned in 11.87 seconds

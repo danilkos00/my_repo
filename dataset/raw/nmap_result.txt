@@ -1,0 +1,11 @@
+# Nmap 7.94SVN scan initiated Mon Sep 28 22:47:53 2026 as: nmap -sV -sC -oX nmap_result.xml -oN nmap_result.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000070s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.58 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.58 (Ubuntu)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 28 22:47:59 2026 -- 1 IP address (1 host up) scanned in 6.45 seconds

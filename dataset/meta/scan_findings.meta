@@ -1,0 +1,12 @@
+dataset_name: github_ip_security_scan
+version: 1.0
+date: 2026-09-28
+target_source: GitHub Meta API (api.github.com/meta)
+github_ranges: 80 CIDR-диапазонов (секции git, web, api) — полный список в raw/github_ips.txt
+target_ips: 127.0.0.1 (локальный Apache 2.4.58 в WSL2 — собственный ресурс); 45.33.32.156 (scanme.nmap.org — авторизованная демо-цель Nmap)
+tools_used: Nmap 7.94SVN; Masscan 1.0-BETA; Nikto 2.1.5; jq; curl
+scan_commands: nmap -sV -sC 127.0.0.1; nmap -sS --max-rate 100 -p1-1000 45.33.32.156; masscan -p80,443,22 45.33.32.156 --rate 100; nikto -h http://127.0.0.1; nikto -h http://45.33.32.156
+scan_scope: только собственные ресурсы и авторизованная демонстрационная цель
+rate_limiting: masscan --rate 100; nmap --max-rate 100
+legal_compliance: GitHub Bug Bounty Rules; УК РФ ст.272
+expert: danilkos00

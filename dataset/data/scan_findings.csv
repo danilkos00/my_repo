@@ -1,0 +1,14 @@
+finding_id,tool,target_ip,port,severity,category,description,expert_comment
+1,Nmap,45.33.32.156,22,Medium,Open Port,SSH-порт открыт в интернете (scanme.nmap.org),Ограничить доступ по IP-whitelist и использовать только аутентификацию по ключам
+2,Nmap,45.33.32.156,80,Low,Open Port,HTTP-порт открыт (веб-сервер),Настроить редирект на HTTPS и добавить security-заголовки
+3,Masscan,45.33.32.156,22,Medium,Open Port,SYN-скан с rate 100 подтвердил открытый SSH (syn-ack ttl 42),Кросс-проверка с Nmap: результаты совпадают
+4,Masscan,45.33.32.156,80,Low,Open Port,SYN-скан с rate 100 подтвердил открытый HTTP (syn-ack ttl 45),Кросс-проверка с Nmap: результаты совпадают
+5,Nmap,127.0.0.1,80,Low,Service,Обнаружен Apache httpd 2.4.58 (Ubuntu) с дефолтной страницей It works,Обновить Apache до актуальной версии и заменить дефолтную страницу
+6,Nikto,127.0.0.1,80,Medium,Missing Header,Отсутствует заголовок X-Frame-Options (риск clickjacking),Добавить Header always set X-Frame-Options SAMEORIGIN в конфиг Apache
+7,Nikto,127.0.0.1,80,Medium,Exposed Path,Доступен /server-status — раскрывает служебную информацию Apache,В блоке Location /server-status оставить Require local и убедиться что извне путь недоступен
+8,Nikto,127.0.0.1,80,Low,Info Disclosure,Утечка inode через ETags (0x29af 0x65c9055446673),Установить FileETag MTime Size
+9,Nikto,127.0.0.1,80,Low,Config,Allowed HTTP Methods: HEAD GET POST OPTIONS,Отключить неиспользуемые HTTP-методы директивой Limit
+10,Nikto,45.33.32.156,80,Medium,Missing Header,Отсутствует заголовок X-Frame-Options на scanme.nmap.org,Та же рекомендация что и в п.6 для собственных серверов с аналогичной конфигурацией
+11,Nikto,45.33.32.156,80,Medium,Exposed Path,Включён directory indexing в /images/ (просматриваемые списки файлов),Отключить Options Indexes — листинг раскрывает структуру каталогов
+12,Nikto,45.33.32.156,80,Low,Info Disclosure,Найден дефолтный файл Apache /icons/README,Удалить дефолтные файлы и примеры из DocumentRoot
+13,Nikto,45.33.32.156,80,Low,Info Disclosure,Утечка inode через ETags на /icons/README (0x13f4 0x438c034968a80),Установить FileETag MTime Size

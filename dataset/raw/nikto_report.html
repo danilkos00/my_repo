@@ -1,0 +1,546 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ <title>Nikto Report</title>
+ <style type="text/css">
+  .dataTable
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 11pt; 
+   font-weight: normal; 
+   color: #000066;
+   background: #EEEEEE;
+   border: thin solid black;
+  }
+  .headerTable
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 15pt; 
+   font-weight: normal; 
+   color: white;
+   background: #000066;
+   border: thin solid black;
+  }
+  .column-head
+  {
+   width: 15em;
+  }
+  .copyright
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 10pt;
+   font-weight: normal;
+   font-style: italic;
+   color: black;
+  }
+  body
+  {
+   background: white;
+  }
+ </style>
+</head>
+<body>
+<div>
+<a name="1"></a><table class="headerTable" width="300"><tr><td>localhost / 127.0.0.1 port 80</td></tr></table>
+<table width="95%" class="dataTable">
+ <tr>
+   <td class="column-head" valign="top"><b>Target IP</b></td>
+   <td>127.0.0.1</td>
+ </tr>
+ <tr>
+   <td class="column-head"><b>Target hostname</b></td>
+   <td>localhost</td>
+ </tr>
+  <tr>
+   <td class="column-head"><b>Target Port</b></td>
+   <td>80</td>
+ </tr>
+  <tr>
+   <td class="column-head"><b>HTTP Server</b></td>
+   <td>Apache/2.4.58 (Ubuntu)</td>
+ </tr>
+ <tr>
+   <td class="column-head"><b>Site Link (Name)</b></td>
+   <td>
+     <a href="http://localhost:80">http://localhost:80</a>
+    </td>
+ </tr>
+ <tr>
+   <td class="column-head"><b>Site Link (IP)</b></td>
+   <td>
+     <a href="http://127.0.0.1:80">http://127.0.0.1:80</a>
+   </td>
+ </tr>
+ </table>
+</div>
+<p></p>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>Server leaks inodes via ETags, header found with file /, fields: 0x29af 0x65c9055446673 </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://localhost:80/">http://localhost:80/</a><br>
+      <a href="http://127.0.0.1:80/">http://127.0.0.1:80/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/0" title="More vuln information on OSVDB.org">OSVDB-0</a>
+    </td>
+</table>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>The anti-clickjacking X-Frame-Options header is not present.</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://localhost:80/">http://localhost:80/</a><br>
+      <a href="http://127.0.0.1:80/">http://127.0.0.1:80/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/0" title="More vuln information on OSVDB.org">OSVDB-0</a>
+    </td>
+</table>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>OPTIONS</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>Allowed HTTP Methods: HEAD, GET, POST, OPTIONS </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://localhost:80/">http://localhost:80/</a><br>
+      <a href="http://127.0.0.1:80/">http://127.0.0.1:80/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/0" title="More vuln information on OSVDB.org">OSVDB-0</a>
+    </td>
+</table>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/server-status</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>/server-status: This reveals Apache information. Comment out appropriate line in httpd.conf or restrict access to allowed hosts.</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://localhost:80/server-status">http://localhost:80/server-status</a><br>
+      <a href="http://127.0.0.1:80/server-status">http://127.0.0.1:80/server-status</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/561" title="More vuln information on OSVDB.org">OSVDB-561</a>
+    </td>
+</table>
+
+<div>
+<p></p>
+<table class="headerTable" width="300"><tr><td>Host Summary</td></tr></table>
+<table  class="dataTable" width="95%">
+ <tr>
+   <td class="column-head"><b>Start Time</b></td>
+   <td>2026-09-28 22:48:18</td>
+ </tr>
+  <tr>
+   <td class="column-head"><b>End Time</b></td>
+   <td>2026-09-28 22:48:23</td>
+ </tr>
+  <tr>
+   <td class="column-head"><b>Elapsed Time</b></td>
+   <td>5 seconds</td>
+ </tr>
+ <tr>
+   <td class="column-head"><b>Statistics</b></td>
+   <td>6544 items checked, 0 errors, 4 findings</td>
+ </tr>
+</table>
+</div>
+<p></p>
+
+<p></p>
+<table class="headerTable" width="300"><tr><td>Scan Summary</td></tr></table>
+<table class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>Software Details</b></td>
+    <td><a href="http://cirt.net/">Nikto 2.1.5</a></td>
+  <tr>
+    <td><b>CLI Options</b></td>
+    <td>-h http://127.0.0.1 -o nikto_report.html</td>
+  </tr>
+  <tr>
+    <td><b>Hosts Tested</b></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><b>Start Time</b></td>
+    <td>Mon Sep 28 22:48:18 2026</td>
+  </tr>
+  <tr>
+    <td><b>End Time</b></td>
+    <td>Mon Sep 28 22:48:23 2026</td>
+  </tr>
+  <tr>
+    <td><b>Elapsed Time</b></td>
+    <td>5 seconds</td>
+  </tr>
+</table>
+<p></p>
+<p class="copyright">&copy; 2008 CIRT, Inc.</p>
+
+<!-- (c) 2008 CIRT, Inc. -->
+
+</body>
+</html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ <title>Nikto Report</title>
+ <style type="text/css">
+  .dataTable
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 11pt; 
+   font-weight: normal; 
+   color: #000066;
+   background: #EEEEEE;
+   border: thin solid black;
+  }
+  .headerTable
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 15pt; 
+   font-weight: normal; 
+   color: white;
+   background: #000066;
+   border: thin solid black;
+  }
+  .column-head
+  {
+   width: 15em;
+  }
+  .copyright
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 10pt;
+   font-weight: normal;
+   font-style: italic;
+   color: black;
+  }
+  body
+  {
+   background: white;
+  }
+ </style>
+</head>
+<body>
+<div>
+<a name="1"></a><table class="headerTable" width="300"><tr><td>scanme.nmap.org / 45.33.32.156 port 80</td></tr></table>
+<table width="95%" class="dataTable">
+ <tr>
+   <td class="column-head" valign="top"><b>Target IP</b></td>
+   <td>45.33.32.156</td>
+ </tr>
+ <tr>
+   <td class="column-head"><b>Target hostname</b></td>
+   <td>scanme.nmap.org</td>
+ </tr>
+  <tr>
+   <td class="column-head"><b>Target Port</b></td>
+   <td>80</td>
+ </tr>
+  <tr>
+   <td class="column-head"><b>HTTP Server</b></td>
+   <td>Apache/2.4.7 (Ubuntu)</td>
+ </tr>
+ <tr>
+   <td class="column-head"><b>Site Link (Name)</b></td>
+   <td>
+     <a href="http://scanme.nmap.org:80">http://scanme.nmap.org:80</a>
+    </td>
+ </tr>
+ <tr>
+   <td class="column-head"><b>Site Link (IP)</b></td>
+   <td>
+     <a href="http://45.33.32.156:80">http://45.33.32.156:80</a>
+   </td>
+ </tr>
+ </table>
+</div>
+<p></p>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>The anti-clickjacking X-Frame-Options header is not present.</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://scanme.nmap.org:80/">http://scanme.nmap.org:80/</a><br>
+      <a href="http://45.33.32.156:80/">http://45.33.32.156:80/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/0" title="More vuln information on OSVDB.org">OSVDB-0</a>
+    </td>
+</table>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>OPTIONS</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>Allowed HTTP Methods: POST, OPTIONS, GET, HEAD </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://scanme.nmap.org:80/">http://scanme.nmap.org:80/</a><br>
+      <a href="http://45.33.32.156:80/">http://45.33.32.156:80/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/0" title="More vuln information on OSVDB.org">OSVDB-0</a>
+    </td>
+</table>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/images/</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>/images/: Directory indexing found.</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://scanme.nmap.org:80/images/">http://scanme.nmap.org:80/images/</a><br>
+      <a href="http://45.33.32.156:80/images/">http://45.33.32.156:80/images/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/3268" title="More vuln information on OSVDB.org">OSVDB-3268</a>
+    </td>
+</table>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/images/?pattern=/etc/*&sort=name</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>/images/?pattern=/etc/*&sort=name: Directory indexing found.</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://scanme.nmap.org:80/images/?pattern=/etc/*&sort=name">http://scanme.nmap.org:80/images/?pattern=/etc/*&sort=name</a><br>
+      <a href="http://45.33.32.156:80/images/?pattern=/etc/*&sort=name">http://45.33.32.156:80/images/?pattern=/etc/*&sort=name</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/3268" title="More vuln information on OSVDB.org">OSVDB-3268</a>
+    </td>
+</table>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/icons/README</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>Server leaks inodes via ETags, header found with file /icons/README, fields: 0x13f4 0x438c034968a80 </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://scanme.nmap.org:80/icons/README">http://scanme.nmap.org:80/icons/README</a><br>
+      <a href="http://45.33.32.156:80/icons/README">http://45.33.32.156:80/icons/README</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/0" title="More vuln information on OSVDB.org">OSVDB-0</a>
+    </td>
+</table>
+
+<table  class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>URI</b></td>
+    <td>/icons/README</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>HTTP Method</b></td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Description</b></td>
+    <td>/icons/README: Apache default file found.</td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>Test Links</b></td>
+    <td>
+      <a href="http://scanme.nmap.org:80/icons/README">http://scanme.nmap.org:80/icons/README</a><br>
+      <a href="http://45.33.32.156:80/icons/README">http://45.33.32.156:80/icons/README</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head" valign="top"><b>OSVDB Entries</b></td>
+    <td>
+       <a href="http://osvdb.org/3233" title="More vuln information on OSVDB.org">OSVDB-3233</a>
+    </td>
+</table>
+
+<div>
+<p></p>
+<table class="headerTable" width="300"><tr><td>Host Summary</td></tr></table>
+<table  class="dataTable" width="95%">
+ <tr>
+   <td class="column-head"><b>Start Time</b></td>
+   <td>2026-09-28 22:59:57</td>
+ </tr>
+  <tr>
+   <td class="column-head"><b>End Time</b></td>
+   <td>2026-09-28 23:24:51</td>
+ </tr>
+  <tr>
+   <td class="column-head"><b>Elapsed Time</b></td>
+   <td>1494 seconds</td>
+ </tr>
+ <tr>
+   <td class="column-head"><b>Statistics</b></td>
+   <td>6544 items checked, 0 errors, 6 findings</td>
+ </tr>
+</table>
+</div>
+<p></p>
+
+<p></p>
+<table class="headerTable" width="300"><tr><td>Scan Summary</td></tr></table>
+<table class="dataTable" width="95%">
+  <tr>
+    <td class="column-head" valign="top"><b>Software Details</b></td>
+    <td><a href="http://cirt.net/">Nikto 2.1.5</a></td>
+  <tr>
+    <td><b>CLI Options</b></td>
+    <td>-h http://45.33.32.156 -o nikto_report.html</td>
+  </tr>
+  <tr>
+    <td><b>Hosts Tested</b></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><b>Start Time</b></td>
+    <td>Mon Sep 28 22:59:46 2026</td>
+  </tr>
+  <tr>
+    <td><b>End Time</b></td>
+    <td>Mon Sep 28 23:24:51 2026</td>
+  </tr>
+  <tr>
+    <td><b>Elapsed Time</b></td>
+    <td>1505 seconds</td>
+  </tr>
+</table>
+<p></p>
+<p class="copyright">&copy; 2008 CIRT, Inc.</p>
+
+<!-- (c) 2008 CIRT, Inc. -->
+
+</body>
+</html>
+
